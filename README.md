@@ -6,7 +6,8 @@
 _This app uses the React library to render a refactored version of an Angular app for the keg list of an invented tap room or bar_
 
 ## Diagram
-<img src="src/assets/images/EpicodusTapRoom.jpg" width="100 height="10">
+<!-- <img src="src/assets/images/EpicodusTapRoom.jpg" width="100 height="10"> -->
+![](src/assets/images/EpicodusTapRoom.jpg)
 
 ## Known Bugs
 _This web app is currently under development._
