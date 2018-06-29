@@ -1,20 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 function Header() {
   return (
     <div>
-      <style jsx>{`
-        h1 {
-          font-size: 28pt;
-          font-style: italic;
-        }
-        Link {
-          font-size: 16pt;
-        }
+      <style global jsx>{`
+          h1 {
+            padding: 15px;
+            padding-top: 25px;
+          }
       `}</style>
-      <h1 className="header">Epicodus's Tap Room:</h1>
-      <Link className="link" to="/">Home</Link> | <Link className="link" to="/newkeg">Enter New Keg</Link>
+      <div className="container">
+        <h1 className="display-3 text-center">Andrew's Cafe and Tap Room</h1>
+        <h5 className="text-center">600 1st Ave, Seattle, WA 98104</h5>
+        <hr/>
+      </div>
     </div>
   );
 }

@@ -1,40 +1,31 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function NewKegForm(){
   return (
     <div>
       <style jsx>{`
-        input {
-          padding: 5px;
-          padding-left: 0px;
-          margin-right: 10px;
-          margin-left: 0px;
-          font-size: 10pt;
-        }
-        button {
-          padding: 5px;
-          margin-left: 0px;
-          border: solid lightgrey 3px;
-        }
-        button:hover {
-          background-color: grey;
-          color: white;
+        form {
+          margin-left: 20px;
         }
       `}</style>
-      <form className="form">
-        <input
+      <form className="form-group">
+        <input className="form-control w-25"
           type='text'
           id='name'
           placeholder='Beer Name:'/>
-        <input
+        <br/>
+        <input className="form-control w-25"
           type='text'
           id='type'
           placeholder='Beer Type:'/>
-        <input
+        <br/>
+        <input className="form-control w-25"
           type='text'
           id='abv'
           placeholder='Beer ABV:'/>
-        <button type='submit'>Submit</button>
+        <br/>
+        <Link className="btn btn-secondary" to="/">Submit</Link>
       </form>
     </div>
   );

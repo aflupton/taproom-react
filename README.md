@@ -1,12 +1,11 @@
-#Tap Room with React
+# Tap Room with React
 #### _Andrew Lupton, 6/29/2018_
 
 ## Description
 
-_This app uses the React library to render a refactored version of an Angular app for the keg list of an invented tap room or bar_
+_This app uses the React library to render a refactored version of an Angular app for a keg list at a nonexistent tap room or bar_
 
 ## Diagram
-<!-- <img src="src/assets/images/TapRoom.jpg" width="100 height="10"> -->
 ![](src/assets/images/TapRoom.jpg)
 
 ## Known Bugs
@@ -14,7 +13,7 @@ _This web app is currently under development._
 
 ## Setup
 
-Clone the repository from Github, navigate to the project directory in your terminal, execute `npm install`, and then run `npm run start` and navigate to `localhost:8080` in your browser to view the app.
+Clone the repository from Github, navigate to the project directory in your terminal, execute `npm install`, execute `npm run start` and then navigate to `localhost:8080` in your browser to view the app.
 
 ## Contact
 

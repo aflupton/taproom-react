@@ -1,24 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import Pint from '../assets/images/Pint.gif';
 
-function Error404(props){
-  console.log(props);
+
+function Error404(){
   return (
     <div>
       <style jsx>{`
         .image {
-          margin: 20px;
+          margin: 10px;
+          max-width: 800px;
         }
         div {
-          padding-left: 20px;
+          padding-left: 10px;
+        }
+        h3, h4 {
+          margin-left: 10px;
         }
       `}</style>
-      <hr/>
-      <hr/>
-      <h3>The page you are looking for does not exist!</h3>
+      <h3>The page you are looking for is still pouring...</h3>
+      <img className="image" src={Pint}/>
       <h4>Would you like to return <Link to="/">home</Link> instead?</h4>
-
     </div>
   );
 }

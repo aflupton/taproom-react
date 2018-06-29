@@ -6,23 +6,42 @@ function Keg(props) {
   return (
     <div>
       <style global jsx>{`
-        .issue {
-          font-style: italic;
-        }
-        .subheader {
-          font-size: 16pt;
-        }
+
       `}</style>
-      <h3 className="subheader">{props.kegName} - {props.kegType}</h3>
-      <p className="issue">{props.kegAbv}</p>
-      <hr/>
+      <div className="container">
+        <table className="table table-striped">
+          <thead>
+            <tr className="text-uppercase text-justify">
+              <th>Beer Name</th>
+              <th>Brewery</th>
+              <th>Style</th>
+              <th>Abv</th>
+              <th>Price</th>
+              <th>Pints Remaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="text-justify">
+              <td>{props.name}</td>
+              <td>{props.brewery}</td>
+              <td>{props.type}</td>
+              <td>{props.abv}</td>
+              <td>{props.price}</td>
+              <td>{props.remaining}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
 
 Keg.propTypes = {
-  kegName: PropTypes.string.isRequired,
-  kegType: PropTypes.string.isRequired,
-  kegAbv: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
+  brewery: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  abv: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  remaining: PropTypes.string.isRequired,
 };
 export default Keg;
