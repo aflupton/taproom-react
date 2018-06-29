@@ -13,7 +13,7 @@ _This web app is currently under development._
 
 ## Notes
 
-Working through issues relating to how the app will function dynamically. Thus far, Angular seems to be more useful more modeling data, whereas React shortens the routing and rendering process.
+Working through issues relating to how the app will function dynamically. Thus far, Angular seems to be more useful for modeling data, whereas React shortens the routing and rendering process.
 
 ## Setup
 
