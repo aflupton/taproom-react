@@ -11,6 +11,10 @@ _This app uses the React library to render a refactored version of an Angular ap
 ## Known Bugs
 _This web app is currently under development._
 
+## Notes
+
+Working through issues relating to how the app will function dynamically. Thus far, Angular seems to be more useful more modeling data, whereas React shortens the routing and rendering process.
+
 ## Setup
 
 Clone the repository from Github, navigate to the project directory in your terminal, execute `npm install`, execute `npm run start` and then navigate to `localhost:8080` in your browser to view the app.
