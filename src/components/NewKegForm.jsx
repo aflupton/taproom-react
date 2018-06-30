@@ -5,28 +5,33 @@ function NewKegForm(){
   return (
     <div>
       <style jsx>{`
-        form {
-          margin-left: 20px;
+        container {
+          text-align: center;
         }
       `}</style>
-      <form className="form-group">
-        <input className="form-control w-25"
-          type='text'
-          id='name'
-          placeholder='Beer Name:'/>
-        <br/>
-        <input className="form-control w-25"
-          type='text'
-          id='type'
-          placeholder='Beer Type:'/>
-        <br/>
-        <input className="form-control w-25"
-          type='text'
-          id='abv'
-          placeholder='Beer ABV:'/>
-        <br/>
-        <Link className="btn btn-secondary" to="/">Submit</Link>
-      </form>
+      <div className="row">
+        <div className="container col-md-12">
+          <form className="form-group">
+            <input className="form-control w-25"
+              type='text'
+              id='name'
+              placeholder='Beer Name:'/>
+            <br/>
+            <input className="form-control w-25"
+              type='text'
+              id='type'
+              placeholder='Beer Type:'/>
+            <br/>
+            <input className="form-control w-25"
+              type='text'
+              id='abv'
+              placeholder='Beer ABV:'/>
+            <br/>
+            <Link className="btn btn-secondary" to="/">Submit</Link>
+          </form>
+        </div>
+      </div>
+
     </div>
   );
 }
