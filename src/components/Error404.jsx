@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Pint from '../assets/images/Pint.gif';
 
 
-function Error404(){
+function Error404(props){
   return (
     <div>
       <style jsx>{`

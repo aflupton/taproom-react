@@ -2,13 +2,11 @@ import React from 'react';
 import Header from './Header';
 import KegList from './KegList';
 import NewKegControl from './NewKegControl';
-import { Switch, Route } from 'react-router-dom';
-import NewKegForm from './NewKegForm';
 import Error404 from './Error404';
 import Footer from './Footer';
 import Nav from './Nav';
 import Admin from './Admin';
-
+import { Switch, Route } from 'react-router-dom';
 
 class App extends React.component {
   constructor(props) {
@@ -24,7 +22,7 @@ class App extends React.component {
   componentDidMount() {
     this.waitTimeUpdateTimer = setInterval(() =>
       this.updateKegElapsedWaitTime(),
-      60000
+    60000
     );
   }
 
@@ -34,7 +32,7 @@ class App extends React.component {
 
   updateKegElapsedWaitTime() {
     let newMasterKegList = this.state.masterKegList.slice();
-      newMasterKegList.forEach((keg) => keg.formattedWaitTime = (keg.timeOpen).fromNow(true)
+    newMasterKegList.forEach((keg) => keg.formattedWaitTime = (keg.timeOpen).fromNow(true)
     );
   }
 
@@ -52,9 +50,9 @@ class App extends React.component {
   render() {
     var myStyledComponentGlobal = {
 
-    }
+    };
     return (
-      <div>
+      <div style={myStyledComponentGlobal}>
         <style global jsx>{`
             body {
               background-color: #F08080;
@@ -66,7 +64,7 @@ class App extends React.component {
         <Header/>
         <Switch>
           <Route exact path='/' render={()=><KegList kegList={this.state.masterKegList} />} />
-          <Route path='/newkeg' render={()=><NewKegForm onNewKegCreation={this.handleAddingNewKegToList} />} />
+          <Route path='/newkeg' render={()=><NewKegControl onNewKegCreation={this.handleAddingNewKegToList} />} />
           <Route path='/admin' render={(props) => <Admin kegList={this.state.masterKegList} currentRouterPath={props.location.pathname} onKegSelection={this.handleChangingSelectedKeg} />} />
           <Route component={Error404} />
         </Switch>

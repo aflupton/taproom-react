@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { v4 } from 'uuid';
 import Moment from 'moment';
 
-function NewKegForm(){
+function NewKegForm(props){
   let _name = null;
   let _brewery = null;
   let _type = null;
@@ -12,9 +13,9 @@ function NewKegForm(){
   let _remaining = null;
 
 
-  fucntion handleNewKegSubmission(event) {
+  function handleNewKegSubmission(event) {
     event.preventDefault();
-    props.onNewTicketCreation({name: _name.value, brewery: _brewery.value, type: _type.value, abv: _abv.value, price: _price.value, remaining: _remaining.value, id: v4(), timeOpen: new Moment()});
+    props.onNewKegCreation({name: _name.value, brewery: _brewery.value, type: _type.value, abv: _abv.value, price: _price.value, remaining: _remaining.value, id: v4(), timeOpen: new Moment()});
     _name.value = '';
     _brewery.value = '';
     _type.value = '';
@@ -32,7 +33,7 @@ function NewKegForm(){
       `}</style>
       <div className="row">
         <div className="container col-md-12">
-          <form className="form-group">
+          <form className="form-group" onSubmit={handleNewKegSubmission}>
             <input className="form-control w-25"
               type='text'
               id='name'
@@ -70,5 +71,9 @@ function NewKegForm(){
     </div>
   );
 }
+
+NewKegForm.propTypes = {
+  onNewKegCreation: PropTypes.func
+};
 
 export default NewKegForm;
