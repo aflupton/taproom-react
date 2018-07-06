@@ -11,7 +11,7 @@ function Admin(props){
   return (
     <div>
       <style jsx>{`
-      
+
       `}</style>
       <div className='container text-center'>
         <h2 className='display-4'>Admin</h2>

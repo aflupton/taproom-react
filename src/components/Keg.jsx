@@ -6,8 +6,10 @@ function Keg(props) {
     <div>
       <style global jsx>{`
           .onHover:hover {
-            background-color: #eeeeee;
+            background-color: #faebd7;
             cursor: pointer;
+            border: solid 1px black;
+            border-radius: 5px;
           }
       `}</style>
       <div className="container">
@@ -60,6 +62,6 @@ Keg.propTypes = {
   formattedWaitTime: PropTypes.string.isRequired,
   currentRouterPath: PropTypes.string,
   onTicketSelection: PropTypes.func,
-  legId: PropTypes.string.isRequired
+  kegId: PropTypes.string.isRequired
 };
 export default Keg;

@@ -18,7 +18,7 @@ function Footer() {
           opacity: 1;
         }
       `}</style>
-      <footer className="footer">
+      <footer className="footer align-middle">
         <div className="container-fluid text-center">
           <p>© 2018, Andrew Lupton</p>
         </div>

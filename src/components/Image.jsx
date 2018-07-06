@@ -5,12 +5,12 @@ function Image() {
   return (
     <div>
       <style global jsx>{`
-          .img {
-
+          .image {
+            max-width: 1024px;
           }
       `}</style>
-      <div className="container">
-        <img className="img img-fluid" src={Pub}/>
+      <div className="container text-center">
+        <img className="image img-fluid" src={Pub}/>
       </div>
     </div>
   );

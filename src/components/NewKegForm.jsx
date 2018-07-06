@@ -32,51 +32,61 @@ function NewKegForm(props){
   return (
     <div>
       <style jsx>{`
-        container {
-          text-align: center;
-        }
+          input {
+
+          }
       `}</style>
-      <div className="container">
-        <div className="form-group">
-          <form className="row" onSubmit={handleNewKegSubmission}>
-            <input className="form-control w-25"
-              type='text'
-              id='name'
-              placeholder='Beer Name:'
-              ref={(input) => {_name = input;}}/>
-            <br/>
-            <input className="form-control w-25"
-              type='text'
-              id='brewery'
-              placeholder='Brewery:'
-              ref={(input) => {_brewery = input;}}/>
-            <br/>
-            <input className="form-control w-25"
-              type='text'
-              id='type'
-              placeholder='Beer Type:'
-              ref={(input) => {_type = input;}}/>
-            <br/>
-            <input className="form-control w-25"
-              type='text'
-              id='abv'
-              placeholder='Beer Abv:'
-              ref={(input) => {_abv = input;}}/>
-            <br/>
-            <input className="form-control w-25"
-              type='text'
-              id='price'
-              placeholder='Beer Price:'
-              ref={(input) => {_price = input;}}/>
-            <br/>
-            <input className="form-control w-25"
-              type='text'
-              id='remaining'
-              placeholder='Pints Remaining:'
-              ref={(input) => {_remaining = input;}}/>
-            <button type='submit' className="btn btn-secondary">Submit</button>
-          </form>
-        </div>
+      <div className='container'>
+        <form onSubmit={handleNewKegSubmission}>
+          <div className='row'>
+            <div className='col-md-4 form-group'>
+              <input className="form-control w-100"
+                type='text'
+                id='name'
+                placeholder='Beer Name:'
+                ref={(input) => {_name = input;}}/>
+            </div>
+            <div className='col-md-4 form-group'>
+              <input className="form-control w-100"
+                type='text'
+                id='brewery'
+                placeholder='Brewery:'
+                ref={(input) => {_brewery = input;}}/>
+            </div>
+            <div className='col-md-4 form-group'>
+              <input className="form-control w-100"
+                type='text'
+                id='type'
+                placeholder='Beer Type:'
+                ref={(input) => {_type = input;}}/>
+            </div>
+          </div>
+          <div className='row'>
+            <div className='col-md-4 form-group'>
+              <input className="form-control w-100"
+                type='text'
+                id='abv'
+                placeholder='Beer Abv:'
+                ref={(input) => {_abv = input;}}/>
+            </div>
+            <div className='col-md-4 form-group'>
+              <input className="form-control w-100"
+                type='text'
+                id='price'
+                placeholder='Beer Price:'
+                ref={(input) => {_price = input;}}/>
+            </div>
+            <div className='col-md-4 form-group'>
+              <input className="form-control w-100"
+                type='text'
+                id='remaining'
+                placeholder='Pints Remaining:'
+                ref={(input) => {_remaining = input;}}/>
+            </div>
+          </div>
+
+          <button type='submit' className="btn btn-secondary">Submit</button>
+        </form>
       </div>
     </div>
   );

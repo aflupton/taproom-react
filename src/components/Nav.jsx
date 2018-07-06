@@ -19,7 +19,7 @@ function Nav() {
           margin: 10px;
         }
       `}</style>
-      <nav className="navbar navbar-fixed-top">
+      <nav className="navbar navbar-fixed-top align-middle">
         <ul>
           <Link className="btn btn-outline-secondary" to="/">Home</Link>
           <Link className="btn btn-outline-secondary" to="/newkeg">Enter New Keg</Link>

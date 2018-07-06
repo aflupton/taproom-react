@@ -71,7 +71,7 @@ class App extends React.Component {
         <Nav/>
         <Header/>
         <Image/>
-        <Switch>
+        <Switch className='container'>
           <Route
             exact path='/'
             render={()=><KegList kegList={this.state.masterKegList} />} />

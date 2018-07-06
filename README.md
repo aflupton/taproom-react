@@ -9,7 +9,7 @@ This app uses the React library to render a refactored version of an Angular app
 ![](src/assets/images/TapRoom.png)
 
 ## Known Bugs
-_None, currently._
+None, currently.
 
 ## Notes
 

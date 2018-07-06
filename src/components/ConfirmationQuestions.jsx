@@ -6,11 +6,14 @@ function ConfirmationQuestions(props) {
     <div>
       <style jsx>{`
           button {
-            color: black;
+            color: #333333;
+          }
+          h4 {
+            font-size: 20pt;
           }
       `}</style>
       <div className='text-center container'>
-        <h5>Do you want to enter a new Keg?</h5>
+        <h4>Do you want to enter a new Keg?</h4>
         <button className='header-btn btn btn-light' onClick={props.onTroubleShootingConfirmation}>Yes</button>
       </div>
     </div>
