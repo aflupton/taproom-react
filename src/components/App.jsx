@@ -1,15 +1,19 @@
 import React from 'react';
 import Header from './Header';
 import KegList from './KegList';
+import NewKegControl from './NewKegControl';
 import { Switch, Route } from 'react-router-dom';
 import NewKegForm from './NewKegForm';
 import Error404 from './Error404';
 import Footer from './Footer';
 import Nav from './Nav';
+import Admin from './Admin';
 
 
-function App(){
+class App extends React.component {
+  constructor
   var myStyledComponentStyles = {
+
   };
   return (
     <div style={myStyledComponentStyles}>
