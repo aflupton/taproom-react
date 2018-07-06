@@ -63,10 +63,17 @@ class App extends React.component {
         <Nav/>
         <Header/>
         <Switch>
-          <Route exact path='/' render={()=><KegList kegList={this.state.masterKegList} />} />
-          <Route path='/newkeg' render={()=><NewKegControl onNewKegCreation={this.handleAddingNewKegToList} />} />
-          <Route path='/admin' render={(props) => <Admin kegList={this.state.masterKegList} currentRouterPath={props.location.pathname} onKegSelection={this.handleChangingSelectedKeg} />} />
-          <Route component={Error404} />
+          <Route
+            exact path='/'
+            render={()=><KegList kegList={this.state.masterKegList} />} />
+          <Route
+            path='/newkeg'
+            render={()=><NewKegControl onNewKegCreation={this.handleAddingNewKegToList} />} />
+          <Route
+            path='/admin'
+            render={(props) => <Admin kegList={this.state.masterKegList} currentRouterPath={props.location.pathname} onKegSelection={this.handleChangingSelectedKeg} />} />
+          <Route
+            component={Error404} />
         </Switch>
         <Footer/>
       </div>

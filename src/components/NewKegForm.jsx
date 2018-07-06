@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { v4 } from 'uuid';
 import Moment from 'moment';
 
@@ -68,7 +68,7 @@ function NewKegForm(props){
               id='remaining'
               placeholder='Pints Remaining:'
               ref={(input) => {_remaining = input;}}/>
-            <Button className="btn btn-secondary" to="/">Submit</Button>
+            <Link className="btn btn-secondary" to="/">Submit</Link>
           </form>
         </div>
       </div>
