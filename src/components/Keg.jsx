@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-
 function Keg(props) {
   return (
     <div>
@@ -34,6 +33,19 @@ function Keg(props) {
       </div>
     </div>
   );
+  if (props.currentRouterPath === '/admin'){
+    return (
+      <div onClick={() => {props.onKegSelection({name: props.name, brewery: props.brewery, type: props.type, abv: props.abv, price: props.price, remaining: props.remaining, formattedWaitTime: props.formattedWaitTime});}}>
+        {KegInformation}
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        {KegInformation}
+      </div>
+    );
+  }
 }
 
 Keg.propTypes = {
@@ -43,5 +55,8 @@ Keg.propTypes = {
   abv: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
   remaining: PropTypes.string.isRequired,
+  formattedWaitTime: PropTypes.string.isRequired,
+  currentRouterPath: PropTypes.string,
+  onTicketSelection: PropTypes.func
 };
 export default Keg;

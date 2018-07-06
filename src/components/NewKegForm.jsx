@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { v4 } from 'uuid';
 import Moment from 'moment';
 
@@ -11,7 +11,6 @@ function NewKegForm(props){
   let _abv = null;
   let _price = null;
   let _remaining = null;
-
 
   function handleNewKegSubmission(event) {
     event.preventDefault();
@@ -37,33 +36,39 @@ function NewKegForm(props){
             <input className="form-control w-25"
               type='text'
               id='name'
-              placeholder='Beer Name:'/>
+              placeholder='Beer Name:'
+              ref={(input) => {_name = input;}}/>
             <br/>
             <input className="form-control w-25"
               type='text'
               id='brewery'
-              placeholder='Brewery:'/>
+              placeholder='Brewery:'
+              ref={(input) => {_brewery = input;}}/>
             <br/>
             <input className="form-control w-25"
               type='text'
               id='type'
-              placeholder='Beer Type:'/>
+              placeholder='Beer Type:'
+              ref={(input) => {_type = input;}}/>
             <br/>
             <input className="form-control w-25"
               type='text'
               id='abv'
-              placeholder='Beer Abv:'/>
+              placeholder='Beer Abv:'
+              ref={(input) => {_abv = input;}}/>
             <br/>
             <input className="form-control w-25"
               type='text'
               id='price'
-              placeholder='Beer Price:'/>
+              placeholder='Beer Price:'
+              ref={(input) => {_price = input;}}/>
             <br/>
             <input className="form-control w-25"
               type='text'
               id='remaining'
-              placeholder='Pints Remaining:'/>
-            <Link className="btn btn-secondary" to="/">Submit</Link>
+              placeholder='Pints Remaining:'
+              ref={(input) => {_remaining = input;}}/>
+            <Button className="btn btn-secondary" to="/">Submit</Button>
           </form>
         </div>
       </div>
