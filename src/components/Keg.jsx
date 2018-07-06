@@ -34,7 +34,7 @@ function Keg(props) {
     </div>;
   if (props.currentRouterPath === '/admin') {
     return (
-      <div onClick={() => {props.onKegSelection({name: props.name, brewery: props.brewery, type: props.type, abv: props.abv, price: props.price, remaining: props.remaining, formattedWaitTime: props.formattedWaitTime});}}>
+      <div onClick={() => {props.onKegSelection(props.kegId);}}>
         {kegInformation}
       </div>
     );
@@ -56,6 +56,7 @@ Keg.propTypes = {
   remaining: PropTypes.string.isRequired,
   formattedWaitTime: PropTypes.string.isRequired,
   currentRouterPath: PropTypes.string,
-  onTicketSelection: PropTypes.func
+  onTicketSelection: PropTypes.func,
+  legId: PropTypes.string.isRequired
 };
 export default Keg;

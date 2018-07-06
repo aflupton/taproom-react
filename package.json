@@ -13,7 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "install": "^0.12.1",
-    "moment": "^2.22.2",
+    "moment": "^2.18.1",
     "npm": "^6.1.0",
     "prop-types": "^15.5.10",
     "react": "^15.6.2",
@@ -21,7 +21,7 @@
     "react-dom": "^15.5.4",
     "react-router-dom": "^4.0.0",
     "styled-jsx": "^2.2.7",
-    "uuid": "^3.3.2"
+    "uuid": "^3.2.1"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",

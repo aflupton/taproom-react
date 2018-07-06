@@ -6,7 +6,7 @@ import KegDetail from './KegDetail';
 function Admin(props){
   let optionalSelectedKegContent = null;
   if (props.selectedKeg != null) {
-    optionalSelectedKegContent = <KegDetail selectedKeg={props.selectedKeg} />;
+    optionalSelectedKegContent = <KegDetail selectedKeg={props.kegList[props.selectedKeg]} />;
   }
   return (
     <div>
@@ -24,7 +24,7 @@ Admin.propTypes = {
   kegList: PropTypes.array,
   currentRouterPath: PropTypes.string.isRequired,
   onKegSelection: PropTypes.func.isRequired,
-  selectedKeg: PropTypes.object
+  selectedKeg: PropTypes.string
 };
 
 export default Admin;

@@ -6,8 +6,9 @@ function KegList(props){
   return (
     <div>
       <hr/>
-      {props.kegList.map((keg) =>
-        <Keg
+      {Object.keys(props.kegList).map(function(kegId) {
+        var keg = props.kegList[kegId];
+        return <Keg
           name={keg.name}
           brewery={keg.brewery}
           type={keg.type}
@@ -17,14 +18,15 @@ function KegList(props){
           formattedWaitTime={keg.formattedWaitTime}
           currentRouterPath={props.currentRouterPath}
           key={keg.id}
-          onKegSelection={props.onKegSelection} />
-      )}
+          kegId={keg.id}
+          onKegSelection={props.onKegSelection} />;
+      })}
     </div>
   );
 }
 
 KegList.propTypes = {
-  kegList: PropTypes.array,
+  kegList: PropTypes.object,
   currentRouterPath: PropTypes.string,
   onKegSelection: PropTypes.func
 };
