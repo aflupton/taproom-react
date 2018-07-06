@@ -13,7 +13,7 @@ function Header() {
             padding: 25px;
           }
       `}</style>
-      <div className="container">
+      <div className="container-fluid">
         <h1 className="display-3 text-center">Andrew's Cafe and Tap Room</h1>
         <h5 className="text-center">600 1st Ave, Seattle, WA 98104</h5>
         <hr/>

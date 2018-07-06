@@ -71,7 +71,8 @@ class App extends React.component {
             render={()=><NewKegControl onNewKegCreation={this.handleAddingNewKegToList} />} />
           <Route
             path='/admin'
-            render={(props) => <Admin kegList={this.state.masterKegList} currentRouterPath={props.location.pathname} onKegSelection={this.handleChangingSelectedKeg} />} />
+            render={(props)=><Admin kegList={this.state.masterKegList} currentRouterPath={props.location.pathname} onKegSelection={this.handleChangingSelectedKeg}
+              selectedKeg={this.state.selectedKeg} />} />
           <Route
             component={Error404} />
         </Switch>
