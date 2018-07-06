@@ -19,7 +19,7 @@ function Error404(){
           margin-left: 10px;
         }
       `}</style>
-      <h3>The page you are looking for is still pouring...</h3>
+      <h3>The page {props.location.pathname} you are looking for is still pouring...</h3>
       <img className="image" src={Pint}/>
       <h4>Would you like to return <Link to="/">home</Link> instead?</h4>
     </div>

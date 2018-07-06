@@ -18,7 +18,7 @@ function Header() {
         }
       `}</style>
       <nav className="navbar navbar-fixed-top">
-        <Link className="btn btn-outline-secondary" to="/">Home</Link> <Link className="btn btn-outline-secondary" to="/newkeg">Enter New Keg</Link>
+        <Link className="btn btn-outline-secondary" to="/">Home</Link> | <Link className="btn btn-outline-secondary" to="/newkeg">Enter New Keg</Link> | <Link className="btn btn-outline-secondary" to="/admin">Admin</Link>
       </nav>
     </div>
   );
