@@ -9,7 +9,7 @@ This app uses the React library to render a refactored version of an Angular app
 ![](src/assets/images/TapRoom.png)
 
 ## Known Bugs
-_This web app is currently under development._
+_Currently throwing an uncaught TypeScript error: `Super expression must either be null or a function, not undefined`._
 
 ## Notes
 
