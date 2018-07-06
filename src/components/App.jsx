@@ -6,6 +6,7 @@ import NewKegControl from './NewKegControl';
 import Error404 from './Error404';
 import Admin from './Admin';
 import Footer from './Footer';
+import { v4 } from 'uuid';
 import { Switch, Route } from 'react-router-dom';
 
 class App extends React.component {
@@ -39,10 +40,11 @@ class App extends React.component {
   }
 
   handleAddingNewKegToList(newKeg) {
+    var newKegId = v4();
     var newMasterKegList = Object.assign({}, this.state.masterKegList, {
-      [newKeg.id]: newKeg
+      [newKegId]: newKeg
     });
-    newMasterKegList[newKeg.id].formattedWaitTime = newMasterKegList[newKeg.id].timeOpen.fromNow(true);
+    newMasterKegList[newKegId].formattedWaitTime = newMasterKegList[newKegId].timeOpen.fromNow(true);
     this.setState({masterKegList: newMasterKegList});
   }
 
@@ -52,15 +54,14 @@ class App extends React.component {
 
   render() {
     var myStyledComponentGlobal = {
-
+      display: 'block',
+      fontFamily: 'sans-serif'
     };
     return (
       <div style={myStyledComponentGlobal}>
         <style global jsx>{`
             body {
               background-color: #F08080;
-              display: block;
-              fontFamily: sans-serif;
             }
       `}</style>
         <Nav/>
@@ -75,7 +76,8 @@ class App extends React.component {
           <Route
             path='/admin'
             render={(props)=><Admin kegList={this.state.masterKegList} currentRouterPath={props.location.pathname} onKegSelection={this.handleChangingSelectedKeg}
-            selectedKeg={this.state.selectedKeg} />} />
+              selectedKeg={this.state.selectedKeg}
+            />} />
           <Route
             component={Error404} />
         </Switch>

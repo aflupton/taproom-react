@@ -17,8 +17,8 @@ function KegList(props){
           remaining={keg.remaining}
           formattedWaitTime={keg.formattedWaitTime}
           currentRouterPath={props.currentRouterPath}
-          key={keg.id}
-          kegId={keg.id}
+          key={kegId}
+          kegId={kegId}
           onKegSelection={props.onKegSelection} />;
       })}
     </div>

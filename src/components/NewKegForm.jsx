@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { v4 } from 'uuid';
 import Moment from 'moment';
 
 function NewKegForm(props){
@@ -14,7 +13,7 @@ function NewKegForm(props){
 
   function handleNewKegSubmission(event) {
     event.preventDefault();
-    props.onNewKegCreation({name: _name.value, brewery: _brewery.value, type: _type.value, abv: _abv.value, price: _price.value, remaining: _remaining.value, id: v4(), timeOpen: new Moment()});
+    props.onNewKegCreation({name: _name.value, brewery: _brewery.value, type: _type.value, abv: _abv.value, price: _price.value, remaining: _remaining.value, timeOpen: new Moment()});
     _name.value = '';
     _brewery.value = '';
     _type.value = '';
