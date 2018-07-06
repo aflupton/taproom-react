@@ -5,7 +5,10 @@ function Keg(props) {
   const kegInformation =
     <div>
       <style global jsx>{`
-
+          .onHover:hover {
+            background-color: #eeeeee;
+            cursor: pointer;
+          }
       `}</style>
       <div className="container">
         <table className="table table-striped">
@@ -19,13 +22,13 @@ function Keg(props) {
               <th>Pints Remaining</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody >
             <tr className="text-justify">
               <td>{props.name}</td>
               <td>{props.brewery}</td>
               <td>{props.type}</td>
-              <td>{props.abv}</td>
-              <td>{props.price}</td>
+              <td>{props.abv}%</td>
+              <td>${props.price}</td>
               <td>{props.remaining}</td>
             </tr>
           </tbody>
@@ -34,7 +37,7 @@ function Keg(props) {
     </div>;
   if (props.currentRouterPath === '/admin') {
     return (
-      <div onClick={() => {props.onKegSelection(props.kegId);}}>
+      <div onClick={() => {props.onKegSelection(props.kegId);}} className='onHover'>
         {kegInformation}
       </div>
     );

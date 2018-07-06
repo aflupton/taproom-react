@@ -5,10 +5,14 @@ function ConfirmationQuestions(props) {
   return (
     <div>
       <style jsx>{`
-
+          button {
+            color: black;
+          }
       `}</style>
-      <p>Please confirm that your entry is accurate.</p>
-      <button className='header-btn btn btn-light' onClick={props.onTroubleShootingConfirmation}>Yes</button>
+      <div className='text-center container'>
+        <h5>Do you want to enter a new Keg?</h5>
+        <button className='header-btn btn btn-light' onClick={props.onTroubleShootingConfirmation}>Yes</button>
+      </div>
     </div>
   );
 }

@@ -10,12 +10,17 @@ function Admin(props){
   }
   return (
     <div>
-      <h2 className='display-4'>Admin</h2>
-      {optionalSelectedKegContent}
-      <KegList
-        kegList={props.kegList}
-        currentRouterPath={props.currentRouterPath}
-        onKegSelection={props.onKegSelection} />
+      <style jsx>{`
+      
+      `}</style>
+      <div className='container text-center'>
+        <h2 className='display-4'>Admin</h2>
+        {optionalSelectedKegContent}
+        <KegList
+          kegList={props.kegList}
+          currentRouterPath={props.currentRouterPath}
+          onKegSelection={props.onKegSelection} />
+      </div>
     </div>
   );
 }

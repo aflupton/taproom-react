@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import Moment from 'moment';
 
 function NewKegForm(props){
@@ -13,7 +12,15 @@ function NewKegForm(props){
 
   function handleNewKegSubmission(event) {
     event.preventDefault();
-    props.onNewKegCreation({name: _name.value, brewery: _brewery.value, type: _type.value, abv: _abv.value, price: _price.value, remaining: _remaining.value, timeOpen: new Moment()});
+    props.onNewKegCreation({
+      name: _name.value,
+      brewery: _brewery.value,
+      type: _type.value,
+      abv: _abv.value,
+      price: _price.value,
+      remaining: _remaining.value,
+      timeOpen: new Moment()
+    });
     _name.value = '';
     _brewery.value = '';
     _type.value = '';
@@ -29,9 +36,9 @@ function NewKegForm(props){
           text-align: center;
         }
       `}</style>
-      <div className="row">
-        <div className="container col-md-12">
-          <form className="form-group" onSubmit={handleNewKegSubmission}>
+      <div className="container">
+        <div className="form-group">
+          <form className="row" onSubmit={handleNewKegSubmission}>
             <input className="form-control w-25"
               type='text'
               id='name'
@@ -67,11 +74,10 @@ function NewKegForm(props){
               id='remaining'
               placeholder='Pints Remaining:'
               ref={(input) => {_remaining = input;}}/>
-            <Link className="btn btn-secondary" to="/">Submit</Link>
+            <button type='submit' className="btn btn-secondary">Submit</button>
           </form>
         </div>
       </div>
-
     </div>
   );
 }

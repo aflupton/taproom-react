@@ -1,15 +1,18 @@
 import React from 'react';
 import Header from './Header';
 import Nav from './Nav';
+import Image from './Image';
 import KegList from './KegList';
 import NewKegControl from './NewKegControl';
 import Error404 from './Error404';
 import Admin from './Admin';
 import Footer from './Footer';
 import { v4 } from 'uuid';
+// import PropTypes from 'prop-types';
+// import Moment from 'moment';
 import { Switch, Route } from 'react-router-dom';
 
-class App extends React.component {
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -61,11 +64,13 @@ class App extends React.component {
       <div style={myStyledComponentGlobal}>
         <style global jsx>{`
             body {
-              background-color: #F08080;
+              background-color: #faebd7;
+              padding-bottom: 100px;
             }
       `}</style>
         <Nav/>
         <Header/>
+        <Image/>
         <Switch>
           <Route
             exact path='/'
