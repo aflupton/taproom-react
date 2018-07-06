@@ -6,7 +6,7 @@
 _This app uses the React library to render a refactored version of an Angular app for a keg list at a nonexistent tap room or bar_
 
 ## Diagram
-![](src/assets/images/TapRoom.jpg)
+![](src/assets/images/TapRoom.png)
 
 ## Known Bugs
 _This web app is currently under development._
