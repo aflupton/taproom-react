@@ -11,30 +11,69 @@ import Admin from './Admin';
 
 
 class App extends React.component {
-  constructor
-  var myStyledComponentStyles = {
+  constructor(props) {
+    super(props);
+    this.state = {
+      masterKegList: [],
+      selectedKeg: null
+    };
+    this.handleAddingNewKegToList = this.handleAddingNewKegToList.bind(this);
+    this.handleChangingSelectedKeg = this.handleChangingSelectedKeg.bind(this);
+  }
 
-  };
-  return (
-    <div style={myStyledComponentStyles}>
-      <style global jsx>{`
-          body {
-            background-color: #F08080;
-            display: block;
-            fontFamily: sans-serif;
-          }
-    `}</style>
-      <Nav/>
-      <Header/>
-      <Switch>
-        <Route exact path='/' component={KegList} />
-        <Route path='/newkeg' component={NewKegForm} />
-        <Route path='/admin' />
-        <Route component={Error404} />
-      </Switch>
-      <Footer/>
-    </div>
-  );
+  componentDidMount() {
+    this.waitTimeUpdateTimer = setInterval(() =>
+      this.updateKegElapsedWaitTime(),
+      60000
+    );
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.waitTimeUpdateTimer);
+  }
+
+  updateKegElapsedWaitTime() {
+    let newMasterKegList = this.state.masterKegList.slice();
+      newMasterKegList.forEach((keg) => keg.formattedWaitTime = (keg.timeOpen).fromNow(true)
+    );
+  }
+
+  handleAddingNewKegToList(newKeg) {
+    var newMasterKegList = this.state.masterKegList.slice();
+    newKeg.formattedWaitTime = (newKeg.timeOpen).fromNow(true);
+    newMasterKegList.push(newKeg);
+    this.setState({masterKegList: newMasterKegList});
+  }
+
+  handleChangingSelectedKeg(keg) {
+    this.setState({selectedKeg: keg});
+  }
+
+  render() {
+    var myStyledComponentGlobal = {
+
+    }
+    return (
+      <div>
+        <style global jsx>{`
+            body {
+              background-color: #F08080;
+              display: block;
+              fontFamily: sans-serif;
+            }
+      `}</style>
+        <Nav/>
+        <Header/>
+        <Switch>
+          <Route exact path='/' render={()=><KegList kegList={this.state.masterKegList} />} />
+          <Route path='/newkeg' render={()=><NewKegForm onNewKegCreation={this.handleAddingNewKegToList} />} />
+          <Route path='/admin' render={(props) => <Admin kegList={this.state.masterKegList} currentRouterPath={props.location.pathname} onKegSelection={this.handleChangingSelectedKeg} />} />
+          <Route component={Error404} />
+        </Switch>
+        <Footer/>
+      </div>
+    );
+  }
 }
 
 export default App;
