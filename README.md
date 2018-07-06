@@ -1,6 +1,5 @@
-# Tap Room
-## _Built with React_
-#### _Andrew Lupton, 6/29/2018_
+# Tap Room with React
+#### _Andrew Lupton, 7/6/2018_
 
 ## Description
 
