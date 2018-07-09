@@ -11,11 +11,14 @@ function Keg(props) {
             border: solid 1px black;
             border-radius: 5px;
           }
+          tr, td {
+            width: 150px;
+          }
       `}</style>
       <div className="container">
         <table className="table table-striped">
           <thead>
-            <tr className="text-uppercase text-justify">
+            <tr className="text-uppercase text-center">
               <th>Beer Name</th>
               <th>Brewery</th>
               <th>Style</th>
@@ -24,8 +27,8 @@ function Keg(props) {
               <th>Pints Remaining</th>
             </tr>
           </thead>
-          <tbody >
-            <tr className="text-justify">
+          <tbody>
+            <tr className="text-center">
               <td>{props.name}</td>
               <td>{props.brewery}</td>
               <td>{props.type}</td>

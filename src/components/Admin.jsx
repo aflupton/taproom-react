@@ -26,7 +26,7 @@ function Admin(props){
 }
 
 Admin.propTypes = {
-  kegList: PropTypes.array,
+  kegList: PropTypes.object,
   currentRouterPath: PropTypes.string.isRequired,
   onKegSelection: PropTypes.func.isRequired,
   selectedKeg: PropTypes.string

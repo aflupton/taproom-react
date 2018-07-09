@@ -8,8 +8,6 @@ import Error404 from './Error404';
 import Admin from './Admin';
 import Footer from './Footer';
 import { v4 } from 'uuid';
-// import PropTypes from 'prop-types';
-// import Moment from 'moment';
 import { Switch, Route } from 'react-router-dom';
 
 class App extends React.Component {
@@ -80,8 +78,7 @@ class App extends React.Component {
             render={()=><NewKegControl onNewKegCreation={this.handleAddingNewKegToList} />} />
           <Route
             path='/admin'
-            render={(props)=><Admin kegList={this.state.masterKegList} currentRouterPath={props.location.pathname} onKegSelection={this.handleChangingSelectedKeg}
-              selectedKeg={this.state.selectedKeg}
+            render={(props)=><Admin kegList={this.state.masterKegList} currentRouterPath={props.location.pathname} onKegSelection={this.handleChangingSelectedKeg} selectedKeg={this.state.selectedKeg}
             />} />
           <Route
             component={Error404} />
